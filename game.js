@@ -82,8 +82,8 @@ const playgame = (userchoice) => {
         // Decide winner based on choices
         if (userchoice === "rock") {
             userwin = compchoice === "paper" ? false : true;
-        } else if (userchoice === "paper") {
-            userwin = compchoice === "scissors" ? false : true;
+        } else if (userchoice === "scissors") {
+            userwin = compchoice === "paper" ? false : true;
         } else {
             userwin = compchoice === "rock" ? false : true;
         }
