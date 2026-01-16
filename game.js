@@ -20,7 +20,7 @@ const compscorepara = document.querySelector("#comp-score");
  * Randomly returns one of the computer's choices: "paper", "rock", or "scissor"
  */
 const getcompchoice = () => {
-    let options = ["paper", "rock", "scissor"];
+    let options = ["paper", "rock", "scissors"];
     const returnindex = Math.floor(Math.random() * 3); // pick random index 0-2
     return options[returnindex];
 };
@@ -81,8 +81,8 @@ const playgame = (userchoice) => {
     } else {
         // Decide winner based on choices
         if (userchoice === "rock") {
-            userwin = compchoice === "scissor" ? false : true;
-        } else if (userchoice === "scissor") {
+            userwin = compchoice === "scissors" ? false : true;
+        } else if (userchoice === "scissors") {
             userwin = compchoice === "rock" ? false : true;
         } else if (userchoice === "paper") {
             userloss = compchoice === "rock" ? false : true;
