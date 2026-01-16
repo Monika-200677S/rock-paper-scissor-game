@@ -33,7 +33,7 @@ const getcompchoice = () => {
  * @param {string} userchoice - what the user chose
  * @param {string} compchoice - what the computer chose
  */
-const showWinner = (userwin, userchoice, compchoice) => {
+const showWinner = (userwin, userloss, userchoice, compchoice) => {
     if (userwin) {
         // Increase user score
         userscore++;
@@ -84,6 +84,8 @@ const playgame = (userchoice) => {
             userwin = compchoice === "paper" ? false : true;
         } else if (userchoice === "scissors") {
             userwin = compchoice === "paper" ? false : true;
+        } else if (userchoice === "paper") {
+            userloss = compchoice === "scissors" ? false : true;
         } else {
             userwin = compchoice === "rock" ? false : true;
         }
